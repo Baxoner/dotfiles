@@ -1,0 +1,54 @@
+! special
+*.foreground: #b5b5b5
+*.background: #202224
+*.backgroundt: #aa202224
+
+! black
+#*.color0:     #181b21
+#*.color8:     #252933
+*.color0:     #0f1012
+*.color8:     #17191c
+
+! red
+#*.color1:     #cf5252
+#*.color9:     #cf5252
+*.color1:     #cf1111
+*.color9:     #cf1111
+
+! green
+#*.color2:     #92ad4a
+#*.color10:    #92ad4a
+*.color2:     #2cb50d
+*.color10:    #2cb50d
+
+! yellow
+#*.color3:     #c9895b
+#*.color11:    #c9895b
+*.color3:     #c6d61a
+*.color11:    #c6d61a
+
+! blue
+#*.color4:     #6f97b8
+#*.color12:    #6f97b8
+*.color4:     #158abd
+*.color12:    #158abd
+
+! magenta
+#*.color5:     #966bab
+#*.color13:    #966bab
+*.color5:     #9065a6
+*.color13:    #9065a6
+
+! cyan
+#*.color6:     #6fa69f
+#*.color14:    #6fa69f
+*.color6:     #3acfca
+*.color14:    #3acfca
+
+! white
+#*.color7:     #cccccc
+#*.color15:    #cccccc
+*.color7:     #b5b5b5
+*.color15:    #b5b5b5
+
+st.font: DejaVuSansMono Nerd Font Mono Book:pixelsize=15:antialias=true:hintstyle=hintmedium
