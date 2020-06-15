@@ -28,7 +28,8 @@ format-background = ${colors.background}
 tray-position = right
 tray-padding = 2
 tray-background = ${colors.background}
-
+wm-restack = i3
+override-redirect = true
 [bar/top]
 
 module-margin = 1
@@ -39,7 +40,7 @@ monitor-strict = false
 
 modules-left = i3
 modules-center = clock
-modules-right = wlnetwork battery pulseaudio
+modules-right = wirednetwork wlnetwork battery pulseaudio backlight
 
 width = 100%
 height = 34
@@ -77,7 +78,7 @@ format = <label-state><label-mode>
 label-mode = %mode%
 label-mode-padding = 2
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
@@ -165,9 +166,33 @@ type=internal/network
 interface = wlp4s0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected =  %local_ip%
+label-connected = 
 label-disconnected =  disconnected
 format-connected-foreground = ${colors.foreground}
+format-disconnected-foreground = ${colors.background}
+
+[module/wirednetwork]
+type=internal/network
+
+interface = ${env:WIRED}
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = 
+label-disconnected =  disconnected
+format-connected-foreground = ${colors.foreground}
+format-disconnected-foreground = ${colors.background}
+
+[module/backlight]
+type=internal/xbacklight
+enable-scroll = true
+
+format = <label>
+label =  %percentage%%
+;ramp-0 = 🌕
+;ramp-1 = 🌔
+;ramp-2 = 🌓
+;ramp-3 = 🌒
+;ramp-4 = 🌑
 
 ;[module/|]
 ;type = custom/text
